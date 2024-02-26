@@ -1,14 +1,14 @@
-import axios from "axios";
+import axios from "axios"
 import '../constants/AppConstants'
 import AppConstants from "../constants/AppConstants";
 
 const home_url = AppConstants.HOME_PATH
-const url = `${home_url}/products`
+const url = `${home_url}/categories`
 
-class ProductService {
-    getAllProducts() {
+class CategoryService {
+    getAllCategories() {
         return axios.get(url)
     }
 }
 
-export default new ProductService()
+export default new CategoryService()

@@ -1,12 +1,12 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import ProductService from "../services/ProductService"
+import ProductService from "../../services/ProductService"
 
 function ListProduct() {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        ProductService.getProduct().then(
+        ProductService.getAllProducts().then(
             res => {
                 setProducts(res.data)
             }
