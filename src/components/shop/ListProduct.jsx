@@ -15,14 +15,26 @@ function ListProduct() {
 
     return (
         <div>
-            <h1>Products</h1>
-            <ul>
-                {products.map(product => (
-                    <li key={product.id}>
-                        {product.name} - ${product.price}
-                    </li>
-                ))}
-            </ul>
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        products.map(
+                            product => (<tr className="table-primary" key={product.id}>
+                                <td>{product.name}</td>
+                                <td>{product.price}</td>
+                                <td><button>Details</button><button>Add</button></td>
+                            </tr>)
+                        )
+                    }
+                </tbody>
+            </table>
         </div>
     )
 }

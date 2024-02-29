@@ -16,18 +16,14 @@ export default function () {
     return (
         <div>
             <h1>Categories</h1>
-            <ul>
-            {
-                categories.map(
-                    category => (
-                        <li key={category.id}>
-                            {category.name}
-                        </li>
+            <div class="list-group">
+                {categories.map(
+                    category =>
+                    (
+                        <a href="#" class="list-group-item list-group-item-action list-group-item-success" key={category.id}>{category.name}</a>
                     )
-                )
-            }
-            </ul>
-
+                )}
+            </div>
         </div>
     )
 }

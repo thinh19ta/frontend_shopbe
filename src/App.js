@@ -1,21 +1,22 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Home from './components/Home';
-import Navbar from './components/layouts/Navbar';
+import './style.css'
+import '@fortawesome/fontawesome-free/css/all.css';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
-import '@fortawesome/fontawesome-free/css/all.css';
-import ListProduct from './components/shop/ListProduct';
-import ListCategory from './components/shop/ListCategory';
+import Home from './components/general/Home';
+import AboutUs from './components/general/AboutUs';
+import Shop from './components/shop/Shop';
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />      
+      <Header />
       <Routes>
-        {/* <Route path='/' element={<Home />} /> */}
-        <Route path='/' element={<ListCategory />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/shop' element={<Shop />} />
+        <Route path='/aboutus' element={<AboutUs />} />
       </Routes>
       <Footer />
     </BrowserRouter>
