@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import CategoryService from "../../services/CategoryService"
 
-export default function () {
+export default function ListCategory({ onIdSelect }) {
 
     const [categories, setCategories] = useState([])
 
@@ -13,14 +13,21 @@ export default function () {
         )
     }, [])
 
+    const handleIdSelect = (id) => {
+        onIdSelect(id)
+    }
+
     return (
         <div>
             <h1>Categories</h1>
-            <div class="list-group">
+            <div className="list-group">
                 {categories.map(
                     category =>
                     (
-                        <a href="#" class="list-group-item list-group-item-action list-group-item-success" key={category.id}>{category.name}</a>
+                        <p className="list-group-item list-group-item-action list-group-item-success"
+                            key={category.id}
+                            onClick={() => handleIdSelect(category.id)}
+                        >{category.name}</p>
                     )
                 )}
             </div>

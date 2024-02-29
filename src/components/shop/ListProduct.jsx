@@ -1,17 +1,32 @@
 import { useEffect } from "react"
 import { useState } from "react"
 import ProductService from "../../services/ProductService"
+import { useNavigate } from "react-router-dom"
 
-function ListProduct() {
+function ListProduct({ categoryId }) {
     const [products, setProducts] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
-        ProductService.getAllProducts().then(
-            res => {
-                setProducts(res.data)
-            }
-        )
-    }, [])
+        if (categoryId) {
+            ProductService.getAllProductsByCategory(categoryId).then(
+                res => {
+                    setProducts(res.data)
+                }
+            )
+        }
+        else {
+            ProductService.getAllProducts().then(
+                res => {
+                    setProducts(res.data)
+                }
+            )
+        }
+    }, [categoryId])
+
+    const handleProductDetail = (id) => {
+        navigate(`/shop/product/${id}`)
+    }
 
     return (
         <div>
@@ -20,7 +35,7 @@ function ListProduct() {
                     <tr>
                         <th>Name</th>
                         <th>Price</th>
-                        <th>Action</th>
+                        <th>action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,7 +44,7 @@ function ListProduct() {
                             product => (<tr className="table-primary" key={product.id}>
                                 <td>{product.name}</td>
                                 <td>{product.price}</td>
-                                <td><button>Details</button><button>Add</button></td>
+                                <td><button onClick={() => handleProductDetail(product.id)}>Details</button><button>Add</button></td>
                             </tr>)
                         )
                     }

@@ -6,9 +6,19 @@ const home_url = AppConstants.HOME_PATH
 const url = `${home_url}/products`
 
 class ProductService {
+
+    getProductById(id) {
+        return axios.get(`${url}/${id}`)
+    }
+
     getAllProducts() {
         return axios.get(url)
     }
+
+    getAllProductsByCategory(categoryId) {
+        return axios.get(`${url}/category/${categoryId}`)
+    }
 }
 
-export default new ProductService()
+const productServiceInstance = new ProductService();
+export default productServiceInstance;
