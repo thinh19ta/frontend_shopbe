@@ -1,7 +1,11 @@
+import Banner from "../layouts/Banner";
+import Slider from "../layouts/Slider";
+
 export default function Home() {
     return (
-        <div className="test">
-            Hello
+        <div>
+            <Slider />
+            <Banner />
         </div>
     )
 }

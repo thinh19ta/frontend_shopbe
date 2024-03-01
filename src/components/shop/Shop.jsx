@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ListCategory from "./ListCategory";
 import ListProduct from "./ListProduct";
+import ShopBanner from "../layouts/ShopBanner";
 
 export default function Shop() {
 
@@ -12,6 +13,10 @@ export default function Shop() {
 
     return (
         <>
+            <ShopBanner />
+
+
+
             <div className="row">
                 <div className="col-md-3">
                     <ListCategory onIdSelect={handleIdSelect} />

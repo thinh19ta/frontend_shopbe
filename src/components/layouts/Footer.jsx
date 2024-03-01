@@ -1,150 +1,99 @@
 export default function Footer() {
     return (
-        <div className="my-5">
-            {/* Footer */}
-            <footer
-                className="text-center text-lg-start text-white"
-                style={{ backgroundColor: "#1c2331" }}
-            >
-                {/* Section: Social media */}
-                <section
-                    className="d-flex justify-content-between p-4"
-                    style={{ backgroundColor: "#6351ce" }}
-                >
-                    {/* Left */}
-                    <div className="me-5">
-                        <span>Get connected with us on social networks:</span>
-                    </div>
-                    {/* Left */}
-                    {/* Right */}
-                    <div>
-                        <a href="" className="text-white me-4">
-                            <i className="fab fa-facebook-f" />
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fab fa-instagram" />
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fab fa-linkedin" />
-                        </a>
-                        <a href="" className="text-white me-4">
-                            <i className="fab fa-github" />
-                        </a>
-                    </div>
-                    {/* Right */}
-                </section>
-                {/* Section: Social media */}
-                {/* Section: Links  */}
-                <section className="">
-                    <div className="container text-center text-md-start mt-5">
-                        {/* Grid row */}
-                        <div className="row mt-3">
-                            {/* Grid column */}
-                            <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                {/* Content */}
-                                <h6 className="text-uppercase fw-bold">Company name</h6>
-                                <hr
-                                    className="mb-4 mt-0 d-inline-block mx-auto"
-                                    style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
-                                />
-                                <p>
-                                    Here you can use rows and columns to organize your footer
-                                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                                    elit.
-                                </p>
+        <div
+            className="footer-section section bg-dark"
+            style={{ backgroundImage: "url(img/bg/footer-bg.png)" }}
+        >
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        {/* Footer Top Start */}
+                        <div className="footer-top section pt-80 pb-50">
+                            <div className="row">
+                                {/* Footer Widget */}
+                                <div className="footer-widget col-lg-4 col-md-6 col-12 mb-40">
+                                    <img
+                                        className="footer-logo"
+                                        src="assets/img/footer-logo.png"
+                                        alt="logo"
+                                    />
+                                    <p>
+                                        Contrary to popular belief, Lorem Ipsum is nosimply random
+                                        text. It has roots in a piece of classical Latin literature
+                                        from 45 BC, making it over Lorem Ipsum is nosimply random
+                                        text.
+                                    </p>
+                                </div>
+                                {/* Footer Widget */}
+                                <div className="footer-widget col-lg-2 col-md-3 col-12 mb-40">
+                                    <h4 className="widget-title">Information</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#">About us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Team member</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Clinet</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Portfolio</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Contact us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/* Footer Widget */}
+                                <div className="footer-widget col-lg-2 col-md-3 col-12 mb-40">
+                                    <h4 className="widget-title">Categories</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Costumes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Lights</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Lights</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Christmas Trees</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Decorations</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                {/* Footer Widget */}
+                                <div className="footer-widget col-lg-4 col-md-6 col-12 mb-40">
+                                    <h4 className="widget-title">Contact Us</h4>
+                                    <ul>
+                                        <li>
+                                            <span>Address:</span> ur address goes here,street Crossroad
+                                            123
+                                        </li>
+                                        <li>
+                                            <span>Phone:</span> +99 859 658 589 . +69 587 456 25
+                                        </li>
+                                        <li>
+                                            <span>Eax:</span> +55 784 7585 . + 985 698 586
+                                        </li>
+                                        <li>
+                                            <span>Email:</span> christ@email.com
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            {/* Grid column */}
-                            {/* Grid column */}
-                            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                {/* Links */}
-                                <h6 className="text-uppercase fw-bold">Products</h6>
-                                <hr
-                                    className="mb-4 mt-0 d-inline-block mx-auto"
-                                    style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
-                                />
-                                <p>
-                                    <a href="#!" className="text-white">
-                                        MDBootstrap
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">
-                                        MDWordPress
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">
-                                        BrandFlow
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">
-                                        Bootstrap Angular
-                                    </a>
-                                </p>
-                            </div>
-                            {/* Grid column */}
-                            {/* Grid column */}
-                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                {/* Links */}
-                                <h6 className="text-uppercase fw-bold">Useful links</h6>
-                                <hr
-                                    className="mb-4 mt-0 d-inline-block mx-auto"
-                                    style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
-                                />
-                                <p>
-                                    <a href="#!" className="text-white">
-                                        Your Account
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">
-                                        Become an Affiliate
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">
-                                        Shipping Rates
-                                    </a>
-                                </p>
-                                <p>
-                                    <a href="#!" className="text-white">
-                                        Help
-                                    </a>
-                                </p>
-                            </div>
-                            {/* Grid column */}
-                            {/* Grid column */}
-                            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                {/* Links */}
-                                <h6 className="text-uppercase fw-bold">Contact</h6>
-                                <hr
-                                    className="mb-4 mt-0 d-inline-block mx-auto"
-                                    style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
-                                />
-                                <p>
-                                    <i className="fas fa-home mr-3" /> Ngũ Hành Sơn, Đà Nẵng, VN
-                                </p>
-                                <p>
-                                    <i className="fas fa-envelope mr-3" /> info@example.com
-                                </p>
-                                <p>
-                                    <i className="fas fa-phone mr-3" /> + 01 234 567 88
-                                </p>
-                                <p>
-                                    <i className="fas fa-print mr-3" /> + 01 234 567 89
-                                </p>
-                            </div>
-                            {/* Grid column */}
                         </div>
-                        {/* Grid row */}
+                        {/* Footer Top End */}
                     </div>
-                </section>
-                {/* Section: Links  */}
-            </footer>
-            {/* Footer */}
+                </div>
+            </div>
         </div>
-
-
     )
 }
