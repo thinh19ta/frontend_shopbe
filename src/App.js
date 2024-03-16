@@ -6,7 +6,7 @@ import Shop from './components/shop/Shop';
 import ProductDetail from './components/shop/ProductDetail';
 import Contact from './components/general/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './assets/styles/style.css'
+import './styles/style.css'
 
 function App() {
   return (

@@ -29,24 +29,39 @@ function ListProduct({ categoryId }) {
     }
 
     return (
-        <div className="container">
-            <div className="row">
-                {
-                    products.map(
-                        product => (
-                            <div className="col-md-3 product-wrapper" key={product.id} >
-                                <div className="product-section" onClick={() => handleProductDetail(product.id)}>
-                                    <h4>{product.name}</h4>
-                                    <h5>{product.price} VND</h5>
+        <div className="product-section section pt-120 pb-120">
+            <div className="container">
+                <div className="row">
+                    {
+                        products.map(
+                            product => (
+                                <div className="col-lg-4 col-md-6 col-12  mb-60" key={product.id} >
+                                    <div className="product">
+                                        <div className="image">
+                                            <a href="product-details.html" className="img">
+                                                <img src="assets/imgs/product/1.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div className="content">
+                                            <div className="head fix">
+                                                <div className="title-category float-left">
+                                                    <h5 className="title"><a href="product-details.html">{product.name}</a></h5>
+                                                    <a href="shop.html" className="category">Catalog</a>
+                                                </div>
+                                                <div className="price float-right">
+                                                    <span className="new">{product.price}đ</span>
+                                                </div>
+                                            </div>
+                                            <div className="action-button fix">
+                                                <a href="#">add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="action-section">
-                                    <button>Buy</button>
-                                    <button>Add to collection</button>
-                                </div>
-                            </div>
+                            )
                         )
-                    )
-                }
+                    }
+                </div>
             </div>
         </div>
     )
