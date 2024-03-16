@@ -1,0 +1,33 @@
+/* Header start */
+
+/* Header end */
+
+
+/* Banner start */
+.banner-section {
+    height: 150px;
+    background-color: burlywood;
+}
+
+.banner-content {
+    text-align: center;
+    line-height: 150px;
+}
+
+/* Banner end */
+
+/* Product start */
+.product-section {
+    height: 150px;
+    margin: 5px;
+    padding: 20px;
+    border: 2px solid blue;
+}
+
+.product-wrapper {
+    border: 2px solid red;
+    margin: 5px;
+
+}
+
+/* Product end */

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ListCategory from "./ListCategory";
 import ListProduct from "./ListProduct";
+import Banner from "../layouts/Banner";
 
 export default function Shop() {
 
@@ -11,16 +12,15 @@ export default function Shop() {
     }
 
     return (
-        <>            
-            <div className="row">
-                <div className="col-md-3">
-                    <ListCategory onIdSelect={handleIdSelect} />
-                </div>
-                <div className="col-md-8">
-                    <ListProduct categoryId={categoryId} />
-                </div>
+        <div>
+            <Banner content={"Shop page"} />
+            <div>
+                <ListCategory onIdSelect={handleIdSelect} />
             </div>
-        </>
+            <div >
+                <ListProduct categoryId={categoryId} />
+            </div>
+        </div>
 
     )
 }

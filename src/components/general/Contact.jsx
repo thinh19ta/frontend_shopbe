@@ -1,9 +1,10 @@
 import Banner from "../layouts/Banner";
 
-export default function AboutUs() {
+
+export default function Contact() {
     return (
         <div>
-            <Banner content={"About page"} />
+            <Banner content={"Contact page"} />
         </div>
     )
 }
